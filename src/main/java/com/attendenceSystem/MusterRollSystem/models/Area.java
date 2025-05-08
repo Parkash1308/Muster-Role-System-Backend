@@ -2,6 +2,7 @@ package com.attendenceSystem.MusterRollSystem.models;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -23,6 +24,7 @@ import lombok.Setter;
 public class Area {
     @Id
     private String areaId;
+    @Column(name = "area_name", nullable = false, unique = true)
     private String areaName;
     @OneToMany(mappedBy = "area")
     private List<SubArea> subAreas;

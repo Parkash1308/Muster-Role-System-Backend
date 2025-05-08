@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class IdPassGenerater {
+public class finIdPassGenerater {
     private static Random random = new Random();
 
     private static String generateRandomNumber(int number) {
