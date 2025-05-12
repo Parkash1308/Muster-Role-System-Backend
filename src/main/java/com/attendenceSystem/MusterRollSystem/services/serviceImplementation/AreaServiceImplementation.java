@@ -6,7 +6,7 @@ import com.attendenceSystem.MusterRollSystem.dto.AreaDto;
 import com.attendenceSystem.MusterRollSystem.models.Area;
 import com.attendenceSystem.MusterRollSystem.repository.AreaRepository;
 import com.attendenceSystem.MusterRollSystem.services.serviceInterface.AreaService;
-import com.attendenceSystem.MusterRollSystem.utils.finIdPassGenerater;
+import com.attendenceSystem.MusterRollSystem.utils.GenerateIdPass;
 
 @Service
 public class AreaServiceImplementation implements AreaService {
@@ -18,7 +18,7 @@ public class AreaServiceImplementation implements AreaService {
 
     @Override
     public AreaDto addArea(AreaDto areaDto) {
-        String areaId = finIdPassGenerater.generateAreaId(areaDto.getAreaName());
+        String areaId = GenerateIdPass.generateAreaId(areaDto.getAreaName());
         Area area = Area.builder()
                 .areaId(areaId)
                 .areaName(areaDto.getAreaName())

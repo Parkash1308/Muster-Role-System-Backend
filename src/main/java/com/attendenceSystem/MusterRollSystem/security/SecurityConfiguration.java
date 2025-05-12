@@ -17,8 +17,10 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/hello", "/api/area/**").permitAll()
+                        .requestMatchers("/addUser").permitAll()
                         .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults()); // Allows HTTP Basic auth
         return http.build();
+
     }
 }

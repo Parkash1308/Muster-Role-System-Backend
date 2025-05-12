@@ -23,4 +23,6 @@ public class UserDto {
     private String password;
     private Date hirDate;
     private Role role;
+    private String siteAreaId;
+
 }
